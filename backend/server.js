@@ -9,10 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Sales API routes
+
 app.use("/api/sales", salesRoutes);
 
-// Home route
+
 app.get("/", (req, res) => {
     res.json({
         message: "Business Intelligence Dashboard API is running"
