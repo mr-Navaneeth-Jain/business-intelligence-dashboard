@@ -3,7 +3,6 @@ const pool = require("../config/db");
 
 const router = express.Router();
 
-// Get all sales
 router.get("/", async (req, res) => {
     try {
         const result = await pool.query(
@@ -19,7 +18,6 @@ router.get("/", async (req, res) => {
     }
 });
 
-// Dashboard summary
 router.get("/summary", async (req, res) => {
     try {
         const result = await pool.query(`
@@ -40,7 +38,6 @@ router.get("/summary", async (req, res) => {
     }
 });
 
-// Monthly revenue
 router.get("/monthly", async (req, res) => {
     try {
         const result = await pool.query(`
@@ -61,7 +58,6 @@ router.get("/monthly", async (req, res) => {
     }
 });
 
-// Sales by category
 router.get("/categories", async (req, res) => {
     try {
         const result = await pool.query(`
